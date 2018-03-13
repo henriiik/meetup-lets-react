@@ -73,7 +73,17 @@
 	padding: 1.5rem;
 }
 
+.todo-list-item .done {
+	text-decoration: line-through;
+}
+
+.todo-list-item .archived {
+	text-decoration: line-through;
+	color: #aaa;
+}
+
 .todo-list-remove-button {
 	font-size: 1.2rem;
 	margin-left: auto;
+	text-transform: capitalize;
 }
