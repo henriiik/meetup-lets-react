@@ -23,13 +23,11 @@ class App extends React.Component<Props, State> {
 	handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		this.setState(prevState => {
-			if (prevState.value === "") {
-				return null;
+			let items = prevState.items;
+			if (prevState.value !== "") {
+				items = prevState.items.concat({ value: prevState.value, status: "WIP" });
 			}
-			return {
-				items: prevState.items.concat({ value: prevState.value, status: "WIP" }),
-				value: "",
-			};
+			return { items };
 		});
 	};
 
